@@ -69,7 +69,7 @@ const Carousel: FC<CarouselProps> = ({
   return (
     <div
       className={`
-        relative
+        relative 
         ${ className }
       `}
     >
@@ -93,7 +93,7 @@ const Carousel: FC<CarouselProps> = ({
                 {
                   images &&
                   <img
-                    className="embla__slide__img"
+                    className="embla__slide__img "
                     src={`${imageByIndex(index, images)}`}
                     alt="Your alt text"
                   />

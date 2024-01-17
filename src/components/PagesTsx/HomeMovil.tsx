@@ -1447,7 +1447,7 @@ const ItemsPlanes: ItemsArray = [
 
 export default function HomeMovil() {
   return (
-    <section className="relative flex flex-col items-center gap-2">
+    <section className="relative flex flex-col items-center gap-2 ">
       <Carousel
         classNameSlide="embla__slide"
         slides={ SLIDES }
