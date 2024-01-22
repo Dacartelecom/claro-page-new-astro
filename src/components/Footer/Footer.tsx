@@ -1,5 +1,5 @@
 'use client'
-import DyCLogoWhite from "../../../public/img/logo-d-y-c.webp"
+import DyCLogoWhite from "../../../public/img/logo-claro-blanco.webp"
 import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 
@@ -127,7 +127,7 @@ export const Footer = () => {
     <>
       <footer className="bg-black flex flex-col items-center">
         <div className="flex flex-col items-center gap-8 py-12 lg:flex-row lg:gap-12">
-          <div className="w-32 h-32">
+          <div className="w-[250px]">
             <img
               src={ `${DyCLogoWhite.src}` }
               alt={ 'Logo D y C' }
@@ -146,12 +146,12 @@ export const Footer = () => {
             </a>
           </div>
           <div className="text-white text-xs font-bold flex flex-col items-center justify-start gap-4">
-            <span className="cursor-pointer" onClick={ () => setActiveModalTerms(true) }>Términos y Condiciones de la Web</span>
-            <span className="cursor-pointer" onClick={ () => setActiveModalPolicy(true) }>Políticas de privacidad</span>
+            {/* <span className="cursor-pointer" onClick={ () => setActiveModalTerms(true) }>Términos y Condiciones de la Web</span>
+            <span className="cursor-pointer" onClick={ () => setActiveModalPolicy(true) }>Políticas de privacidad</span> */}
           </div>
         </div>
         <div className="text-[#ee122c] text-center text-sm font-semibold py-8 border-t border-gray-500 w-full lg:text-base">
-          <span>©COMPANY D&C DIGITAL GROUP S.A.C. Distribuidor Autorizado de Claro</span>
+          <span>Distribuidor Autorizado de Claro</span>
         </div>
         <a
           href={`tel:${ number.tel }`}

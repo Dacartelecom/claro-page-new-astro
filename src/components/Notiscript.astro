@@ -1,0 +1,9 @@
+---
+import IframeClaroO from './IframeClaroO.html'
+import IframePlanesO from './IframePlanesO.html'
+
+---
+        const urlDelSitio = window.location.href
+        const nombreDelDominio = urlDelSitio.replace(/^https?:\/\/(?:www\.)?/, '').split('/')[0];
+        nombreDelDominio ==='clarofertas' ? <IframeClaroO/>  : <IframePlanesO/>
+

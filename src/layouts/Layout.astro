@@ -2,8 +2,10 @@
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import { Nav } from '../components/Header/Nav';
-import Tag from '../components/Tag.html'
 const { title } = Astro.props;
+import Tag from '../components/Tag.astro'
+import IframeClaroO from '../components/IframeClaroO.html'
+import PlanesHogarTag from '../components/PlanesHogarTag.html'
 
 ---
 
@@ -25,7 +27,7 @@ const { title } = Astro.props;
 		referrerpolicy="no-referrer"
 	  />
 	</head>
-	<body>
+	<>
 		<Header client:only="react"/>
 		<main>
 			<Nav client:only="react"/>
@@ -33,13 +35,8 @@ const { title } = Astro.props;
 
 		</main>
 		<Footer client:only="react"/>
-
-  	<!-- Google Tag Manager (noscript) -->
-  	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDHM665"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+		<IframeClaroO/>
 	<script>
-		
 	</script>
   </html>
 
