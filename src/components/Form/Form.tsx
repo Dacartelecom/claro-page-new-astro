@@ -1,4 +1,5 @@
 'use client'
+import axios from "axios";
 import type { FormProps } from "../../interfaces/Form.props";
 import  { type ChangeEvent, type FC, useState } from "react";
 const Form: FC<FormProps> = ({
@@ -136,6 +137,18 @@ const Form: FC<FormProps> = ({
   //   }
   // });
 
+  const callMeNumber = async (number: string) => {
+    try {
+      const res = await axios.post('https://develzpbx.com/api/call-me',{
+        number
+      });
+
+      console.log(res)
+    } catch (error) {
+      console.log(error)
+    };
+  };
+
 
   const sendNumber = (e: any) => {
     e.preventDefault();
@@ -143,6 +156,8 @@ const Form: FC<FormProps> = ({
     const url = "https://ws-dacar-ica.octopus-latam.com/?";
     const data = new URLSearchParams();
     let service = 'PeruHfcCallme'
+
+    callMeNumber(inputState);
 
     if(TSource === '01clarohogar'){
       data.append("service", "PeruHfc1");
@@ -229,7 +244,7 @@ const Form: FC<FormProps> = ({
   return (
     <form
       className={`flex flex-col p-4 m-4 shadow-3xl rounded-3xl max-w-[350px] ${ className }`}
-      onSubmit={ sendNumber }
+      onSubmit={sendNumber}
     >
       { children }
       <label
