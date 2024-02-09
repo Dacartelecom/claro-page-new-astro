@@ -27,6 +27,9 @@ const Plan: FC<PlanProps> = ({
   const params = new URLSearchParams(window.location.search);
   const pathname = window.location.pathname;
 
+  const urlDelSitio = window.location.href;
+  const nombreDelDominio = urlDelSitio.replace(/^https?:\/\/(?:www\.)?/, '').split('/')[0];
+
   const [activeModal, setActiveModal] = useState<boolean>(false);
   const [activeModalDetails, setActiveModalDetails] = useState<boolean>(false);
   const [activeModalFull, setActiveModalFull] = useState<boolean>(false);
@@ -41,103 +44,104 @@ const Plan: FC<PlanProps> = ({
   const [TSource] = useState(params.get('T-source'));
 
   useEffect(() => {
-    if (TSource) {
-      let defaultNumber = {
-        tel: '01 6805992',
-        num: '(01) 6805992'
-      };
+    if (nombreDelDominio.includes("clarofertas")) {
+      if (TSource){
+        switch(TSource){
+          case 'ext':
+            setNumber({
+              tel: '016806465',
+              num: '(01) 6806465'
+            });
+            break;
 
-      switch (pathname) {
-        case '/planes-moviles':
-          defaultNumber = {
-            tel: '01 6805992',
-            num: '(01) 6805992'
-          };
-          break;
+          case 'ext_1':
+            setNumber({
+              tel: '016806268',
+              num: '(01) 6806268'
+            });
+            break;
 
-        default:
-          defaultNumber = {
-            tel: '016805993',
-            num: '(01) 6805993'
-          };
-          break;
+          case 'ext_2':
+            setNumber({
+              tel: '016806466',
+              num: '(01) 6806466'
+            });
+            break;
+
+          case 'ext_3':
+            setNumber({
+              tel: '6806269',
+              num: '(01) 6806269'
+            });
+            break;
+        }
+      } else {
+        if (pathname.includes('planes-moviles')){
+          setNumber({
+            tel: '016806465',
+            num: '(01) 6806465'
+          });
+        }else{
+          setNumber({
+            tel: '016806465',
+            num: '(01) 6806465'
+          });
+        }
       }
-
-      switch (TSource) {
-        case '01clarohogar':
-          setNumber({
-            tel: '016806301',
-            num: '(01) 6806301'
-          });
-          break;
-
-        case '02clarointernet':
-          setNumber({
-            tel: '016806302',
-            num: '(01) 6806302'
-          });
-          break;
-
-        case '03clarotv':
-          setNumber({
-            tel: '016806303',
-            num: '(01) 6806303'
-          });
-          break;
-
-        case '05claroperu':
-          setNumber({
-            tel: '016806545',
-            num: '(01) 6806545'
-          });
-          break;
-
-        case '06claromovil':
+      
+    }else{
+      if (TSource) {
+        switch (TSource) {
+          case '01clarohogar':
+            setNumber({
+              tel: '016806301',
+              num: '(01) 6806301'
+            });
+            break;
+  
+          case '02clarointernet':
+            setNumber({
+              tel: '016806302',
+              num: '(01) 6806302'
+            });
+            break;
+  
+          case '03clarotv':
+            setNumber({
+              tel: '016806303',
+              num: '(01) 6806303'
+            });
+            break;
+  
+          case '05claroperu':
+            setNumber({
+              tel: '016806545',
+              num: '(01) 6806545'
+            });
+            break;
+  
+          case '06claromovil':
+            setNumber({
+              tel: '016805992',
+              num: '(01) 6805992'
+            });
+            break;
+        }
+      } else {
+        if (pathname.includes('planes-moviles')){
           setNumber({
             tel: '016805992',
             num: '(01) 6805992'
           });
-          break;
-
-        case 'rrss':
-          switch (pathname) {
-            case '/planes-moviles':
-              setNumber({
-                tel: '016806268',
-                num: '(01) 6806268'
-              });
-              break;
-
-            default:
-              setNumber({
-                tel: '016806269',
-                num: '(01) 6806269'
-              });
-              break;
-            }
-          break;
-
-        default:
-          setNumber(defaultNumber);
-          break;
-      }
-    } else {
-      switch (pathname) {
-        case '/planes-moviles/':
-          setNumber({
-            tel: '01 6805992',
-            num: '(01) 6805992'
-          });
-          break;
-
-        default:
+        }else{
           setNumber({
             tel: '016805993',
             num: '(01) 6805993'
           });
-          break;
+        }
       }
     }
+    
   },[
     pathname,
     TSource

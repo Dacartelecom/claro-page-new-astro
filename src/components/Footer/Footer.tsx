@@ -1,5 +1,6 @@
 'use client'
-import DyCLogoWhite from "../../../public/img/logo-claro-blanco.webp"
+import ClaroLogoWhite from "../../../public/img/logo-claro-blanco.webp"
+import DyCLogoWhite from "../../../public/img/logo-d-y-c.webp"
 import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 
@@ -8,6 +9,56 @@ export const Footer = () => {
 
   const params = new URLSearchParams(window.location.search);
   const pathname = window.location.pathname;
+
+  const urlDelSitio = window.location.href;
+  const nombreDelDominio = urlDelSitio.replace(/^https?:\/\/(?:www\.)?/, '').split('/')[0];
+
+  let component;
+  if (nombreDelDominio.includes("clarofertas")) {
+    component = (
+      <>
+
+      </>
+    )
+  } else {
+    component = (
+      <>
+        <span className="cursor-pointer" onClick={() => setActiveModalTerms(true)}>Términos y Condiciones de la Web</span>
+        <span className="cursor-pointer" onClick={() => setActiveModalPolicy(true)}>Políticas de privacidad</span>
+      </>
+    )
+  }
+
+  let Logo;
+  if (nombreDelDominio.includes("clarofertas")) {
+    Logo = (
+      <>
+        <div className="w-[250px]">
+          <img
+            src={`${ClaroLogoWhite.src}`}
+            alt={'Logo D y C'}
+            width={120}
+            height={120}
+            className="w-full h-auto"
+          />
+        </div>
+      </>
+    )
+  } else {
+    Logo = (
+      <>
+        <div className="w-36 h-36">
+          <img
+            src={`${DyCLogoWhite.src}`}
+            alt={'Logo D y C'}
+            width={120}
+            height={120}
+            className="w-full h-auto"
+          />
+        </div>
+      </>
+    )
+  }
 
   const [activeModalTerms, setActiveModalTerms] = useState<boolean>(false);
   const [activeModalPolicy, setActiveModalPolicy] = useState<boolean>(false);
@@ -21,104 +72,104 @@ export const Footer = () => {
   const [TSource] = useState(params.get('T-source'));
 
   useEffect(() => {
-    if (TSource) {
-      let defaultNumber = {
-        tel: '01 6805992',
-        num: '(01) 6805992'
-      };
+    if (nombreDelDominio.includes("clarofertas")) {
+      if (TSource) {
+        switch (TSource) {
+          case 'ext':
+            setNumber({
+              tel: '016806465',
+              num: '(01) 6806465'
+            });
+            break;
 
-      switch (pathname) {
-        case '/planes-moviles':
-          defaultNumber = {
-            tel: '01 6805992',
-            num: '(01) 6805992'
-          };
-          break;
+          case 'ext_1':
+            setNumber({
+              tel: '016806268',
+              num: '(01) 6806268'
+            });
+            break;
 
-        default:
-          defaultNumber = {
-            tel: '016805993',
-            num: '(01) 6805993'
-          };
-          break;
+          case 'ext_2':
+            setNumber({
+              tel: '016806466',
+              num: '(01) 6806466'
+            });
+            break;
+
+          case 'ext_3':
+            setNumber({
+              tel: '6806269',
+              num: '(01) 6806269'
+            });
+            break;
+        }
+      } else {
+        if (pathname.includes('planes-moviles')) {
+          setNumber({
+            tel: '016806465',
+            num: '(01) 6806465'
+          });
+        } else {
+          setNumber({
+            tel: '016806465',
+            num: '(01) 6806465'
+          });
+        }
       }
 
-      switch (TSource) {
-        case '01clarohogar':
-          setNumber({
-            tel: '016806301',
-            num: '(01) 6806301'
-          });
-          break;
+    } else {
+      if (TSource) {
+        switch (TSource) {
+          case '01clarohogar':
+            setNumber({
+              tel: '016806301',
+              num: '(01) 6806301'
+            });
+            break;
 
-        case '02clarointernet':
-          setNumber({
-            tel: '016806302',
-            num: '(01) 6806302'
-          });
-          break;
+          case '02clarointernet':
+            setNumber({
+              tel: '016806302',
+              num: '(01) 6806302'
+            });
+            break;
 
-        case '03clarotv':
-          setNumber({
-            tel: '016806303',
-            num: '(01) 6806303'
-          });
-          break;
+          case '03clarotv':
+            setNumber({
+              tel: '016806303',
+              num: '(01) 6806303'
+            });
+            break;
 
-        case '05claroperu':
-          setNumber({
-            tel: '016806545',
-            num: '(01) 6806545'
-          });
-          break;
+          case '05claroperu':
+            setNumber({
+              tel: '016806545',
+              num: '(01) 6806545'
+            });
+            break;
 
-        case '06claromovil':
+          case '06claromovil':
+            setNumber({
+              tel: '016805992',
+              num: '(01) 6805992'
+            });
+            break;
+        }
+      } else {
+        if (pathname.includes('planes-moviles')) {
           setNumber({
             tel: '016805992',
             num: '(01) 6805992'
           });
-          break;
-
-        case 'rrss':
-          switch (pathname) {
-            case '/planes-moviles':
-              setNumber({
-                tel: '016806268',
-                num: '(01) 6806268'
-              });
-              break;
-
-            default:
-              setNumber({
-                tel: '016806269',
-                num: '(01) 6806269'
-              });
-              break;
-            }
-          break;
-
-        default:
-          setNumber(defaultNumber);
-          break;
-      }
-    } else {
-      switch (pathname) {
-        case '/planes-moviles/':
-          setNumber({
-            tel: '01 6805992',
-            num: '(01) 6805992'
-          });
-          break;
-
-        default:
+        } else {
           setNumber({
             tel: '016805993',
             num: '(01) 6805993'
           });
-          break;
+        }
       }
     }
-  },[
+  }, [
     pathname,
     TSource
   ]);
@@ -127,43 +178,37 @@ export const Footer = () => {
     <>
       <footer className="bg-black flex flex-col items-center">
         <div className="flex flex-col items-center gap-8 py-12 lg:flex-row lg:gap-12">
-          <div className="w-[250px]">
-            <img
-              src={ `${DyCLogoWhite.src}` }
-              alt={ 'Logo D y C' }
-              width={ 120 }
-              height={ 120 }
-              className="w-full h-auto"
-            />
+          <div className="flex flex-col items-center">
+
+            {Logo}
           </div>
           <div className="text-white font-bold flex flex-col items-center gap-2">
             <span>Línea exclusiva de ventas</span>
             <a
-              href={ `tel:${ number.tel }` }
+              href={`tel:${number.tel}`}
               className="text-3xl transition-all duration-300 hover:text-[#ee122c]"
             >
-              { number.num }
+              {number.num}
             </a>
           </div>
           <div className="text-white text-xs font-bold flex flex-col items-center justify-start gap-4">
-            {/* <span className="cursor-pointer" onClick={ () => setActiveModalTerms(true) }>Términos y Condiciones de la Web</span>
-            <span className="cursor-pointer" onClick={ () => setActiveModalPolicy(true) }>Políticas de privacidad</span> */}
+            {component}
           </div>
         </div>
         <div className="text-[#ee122c] text-center text-sm font-semibold py-8 border-t border-gray-500 w-full lg:text-base">
-          <span>Distribuidor Autorizado de Claro</span>
+        <span>{nombreDelDominio.includes("clarofertas")?'Distribuidor Autorizado de Claro': '©COMPANY D&C DIGITAL GROUP S.A.C. Distribuidor Autorizado de Claro'}</span>
         </div>
         <a
-          href={`tel:${ number.tel }`}
+          href={`tel:${number.tel}`}
           className="fixed left-3 bottom-3 rounded-full w-16 h-16 bg-[#ee122c] text-white text-3xl flex items-center justify-center animate-[blink_2s_infinite] md:hidden"
         >
           <i className="fa-solid fa-phone-volume"></i>
         </a>
       </footer>
       <Modal
-        activeModal={ activeModalTerms }
-        setActiveModal={ setActiveModalTerms }
-        background={ "#fff" }
+        activeModal={activeModalTerms}
+        setActiveModal={setActiveModalTerms}
+        background={"#fff"}
         buttonEnd
       >
         <div className="w-full">
@@ -184,9 +229,9 @@ export const Footer = () => {
         </div>
       </Modal>
       <Modal
-        activeModal={ activeModalPolicy }
-        setActiveModal={ setActiveModalPolicy }
-        background={ "#fff" }
+        activeModal={activeModalPolicy}
+        setActiveModal={setActiveModalPolicy}
+        background={"#fff"}
         buttonEnd
       >
         <div className="w-full">

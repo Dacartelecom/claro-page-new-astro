@@ -3,9 +3,8 @@ import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import { Nav } from '../components/Header/Nav';
 const { title } = Astro.props;
-import Tag from '../components/Tag.astro'
-import IframeClaroO from '../components/IframeClaroO.html'
-import PlanesHogarTag from '../components/PlanesHogarTag.html'
+import Tag from '../components/Tag.astro';
+import Notiscript from '../components/Notiscript.astro';
 
 ---
 
@@ -16,7 +15,7 @@ import PlanesHogarTag from '../components/PlanesHogarTag.html'
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link
@@ -35,7 +34,8 @@ import PlanesHogarTag from '../components/PlanesHogarTag.html'
 
 		</main>
 		<Footer client:only="react"/>
-		<IframeClaroO/>
+
+		<Notiscript/>
 	<script>
 	</script>
   </html>

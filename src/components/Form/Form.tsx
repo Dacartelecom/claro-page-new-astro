@@ -1,4 +1,3 @@
-'use client'
 import axios from "axios";
 import type { FormProps } from "../../interfaces/Form.props";
 import  { type ChangeEvent, type FC, useState } from "react";
@@ -11,6 +10,9 @@ const Form: FC<FormProps> = ({
 
   const params = new URLSearchParams(window.location.search);
   const pathname = window.location.pathname;
+
+  const urlDelSitio = window.location.href;
+  const nombreDelDominio = urlDelSitio.replace(/^https?:\/\/(?:www\.)?/, '').split('/')[0];
 
   const [loading, setLoading] = useState<boolean>(false);
   const [length, setLength] = useState<number>(0);
@@ -40,112 +42,11 @@ const Form: FC<FormProps> = ({
     }, 3000);
   }
   
-  // const validationSchema = Yup.object().shape({
-  //   number: Yup.string()
-  //     .min(9)
-  //     .matches(/^[0-9]{1,9}$/, 'Debe ser un número de hasta 9 dígitos')
-  //     .required('Este campo es requerido'),
-  // });
-
-  // const formik = useFormik({
-  //   enableReinitialize: true,
-  //   initialValues: {
-  //     number: ''  
-  //   },
-  //   validationSchema,
-  //   onSubmit: async (formData:any, { resetForm }:any) => {
-  //     setLoading(true);
-  //     try {
-  //       const url = "https://ws-dacar-ica.octopus-latam.com/?";
-  //       const data = new URLSearchParams();
-  //       let service = 'PeruHfcCallme'
-
-  //       if(TSource === '01clarohogar'){
-  //         data.append("service", "PeruHfc1");
-  //         data.append("username", "dacar");
-  //         data.append("password", "O8Sw36BwGurYZcFU9vsa");
-  //         service = "PeruHfc1"
-  //       } else if(TSource === '02clarointernet'){
-  //         data.append("service", "PeruHfc2");
-  //         data.append("username", "dacar");
-  //         data.append("password", "O8Sw36BwGurYZcFU9vsa");
-  //         service = "PeruHfc2"
-  //       } else if(TSource === '03clarotv'){
-  //         data.append("service", "PeruHfc3");
-  //         data.append("username", "dacar");
-  //         data.append("password", "O8Sw36BwGurYZcFU9vsa");
-  //         service = "PeruHfc3"
-  //       } else if(TSource === '05claroperu'){
-  //         data.append("service", "PeruHfc5");
-  //         data.append("username", "dacar");
-  //         data.append("password", "O8Sw36BwGurYZcFU9vsa");
-  //         service = "PeruHfc5"
-  //       } else if(TSource === '06claromovil'){
-  //         data.append("service", "PeruMovilCallme");
-  //         data.append("username", "dacar");
-  //         data.append("password", "StzsK46vs0a4nCJU55wD");
-  //         service = "PeruMovilCallme"
-  //       } else if(pathname.includes('planes-moviles') && TSource === 'rrss'){
-  //         data.append("service", "PeruMovilRsCallme");
-  //         data.append("username", "dacar");
-  //         data.append("password", "StzsK46vs0a4nCJU55wD");
-  //         service = "PeruMovilRsCallme"
-  //       }  else if(TSource === 'rrss'){
-  //         data.append("service", "PeruHfcRsCallme");
-  //         data.append("username", "dacar");
-  //         data.append("password", "StzsK46vs0a4nCJU55wD");
-  //         service = "PeruHfcRsCallme"
-  //       } else if(pathname.includes('planes-moviles')){
-  //         data.append("service", "PeruMovilCallme");
-  //         data.append("username", "dacar");
-  //         data.append("password", "StzsK46vs0a4nCJU55wD");
-  //         service = "PeruMovilCallme"
-  //       } else {
-  //         data.append("service", "PeruHfcCallme");
-  //         data.append("username", "dacar");
-  //         data.append("password", "StzsK46vs0a4nCJU55wD");
-  //       }
-
-  //       data.append("telephone", formData.number);
-
-  //       if (TSource) {
-  //         data.append("tsource", TSource);
-  //       } else {
-  //         data.append("tsource", "");
-  //       }
-
-  //       if (Gclid) {
-  //         data.append("gclid", Gclid);
-  //       } else {
-  //         data.append("gclid", "");
-  //       }
-
-  //       data.append("ip", "127.0.0.1");
-
-  //       const lead = url + data.toString();
-
-  //       await fetch(lead);
-
-  //       setResponse('¡Gracias por contactarnos! En breve, un asesor se pondrá en contacto contigo.');
-  //       setLoading(false);
-  //       resetForm();
-  //       console.log(service);
-  //     } catch (error) {
-  //       setLoading(false);
-  //       console.error(error);
-  //     }
-  //   }
-  // });
-
   const callMeNumber = async (number: string) => {
     try {
       const res = await axios.post('https://develzpbx.com/api/call-me',{
         number
       });
-      // const res = await axios.post('http://localhost:4002/api/call-me',{
-      //   number
-      // });
-
       console.log(res)
     } catch (error) {
       console.log(error)
@@ -162,50 +63,71 @@ const Form: FC<FormProps> = ({
 
     callMeNumber(inputState);
 
-    if(TSource === '01clarohogar'){
-      data.append("service", "PeruHfc1");
-      data.append("username", "dacar");
-      data.append("password", "O8Sw36BwGurYZcFU9vsa");
-      service = "PeruHfc1"
-    } else if(TSource === '02clarointernet'){
-      data.append("service", "PeruHfc2");
-      data.append("username", "dacar");
-      data.append("password", "O8Sw36BwGurYZcFU9vsa");
-      service = "PeruHfc2"
-    } else if(TSource === '03clarotv'){
-      data.append("service", "PeruHfc3");
-      data.append("username", "dacar");
-      data.append("password", "O8Sw36BwGurYZcFU9vsa");
-      service = "PeruHfc3"
-    } else if(TSource === '05claroperu'){
-      data.append("service", "PeruHfc5");
-      data.append("username", "dacar");
-      data.append("password", "O8Sw36BwGurYZcFU9vsa");
-      service = "PeruHfc5"
-    } else if(TSource === '06claromovil'){
-      data.append("service", "PeruMovilCallme");
-      data.append("username", "dacar");
-      data.append("password", "StzsK46vs0a4nCJU55wD");
-      service = "PeruMovilCallme"
-    } else if(pathname.includes('planes-moviles') && TSource === 'rrss'){
-      data.append("service", "PeruMovilRsCallme");
-      data.append("username", "dacar");
-      data.append("password", "StzsK46vs0a4nCJU55wD");
-      service = "PeruMovilRsCallme"
-    }  else if(TSource === 'rrss'){
-      data.append("service", "PeruHfcRsCallme");
-      data.append("username", "dacar");
-      data.append("password", "StzsK46vs0a4nCJU55wD");
-      service = "PeruHfcRsCallme"
-    } else if(pathname.includes('planes-moviles')){
-      data.append("service", "PeruMovilCallme");
-      data.append("username", "dacar");
-      data.append("password", "StzsK46vs0a4nCJU55wD");
-      service = "PeruMovilCallme"
-    } else {
-      data.append("service", "PeruHfcCallme");
-      data.append("username", "dacar");
-      data.append("password", "StzsK46vs0a4nCJU55wD");
+    if (nombreDelDominio.includes("clarofertas")) {
+      if(TSource === 'ext'){
+        data.append("service", "PeruHfcResi");
+        data.append("username", "dacar");
+        data.append("password", "O8Sw36BwGurYZcFU9vsa");
+        service = "PeruHfc2"
+      } else if(TSource === 'ext_1'){
+        data.append("service", "PeruMovilRsCallme");
+        data.append("username", "dacar");
+        data.append("password", "StzsK46vs0a4nCJU55wD");
+        service = "PeruHfc3"
+      } else if(TSource === 'ext_2'){
+        data.append("service", "PeruMovilResi");
+        data.append("username", "dacar");
+        data.append("password", "O8Sw36BwGurYZcFU9vsa");
+        service = "PeruHfc5"
+      } else if(TSource === 'ext_3'){
+        data.append("service", "PeruHfcRsCallme");
+        data.append("username", "dacar");
+        data.append("password", "StzsK46vs0a4nCJU55wD");
+        service = "PeruMovilCallme"
+      } else {
+        data.append("service", "PeruHfcResi");
+        data.append("username", "dacar");
+        data.append("password", "O8Sw36BwGurYZcFU9vsa");
+      }
+      
+    }else{
+  
+      if(TSource === '01clarohogar'){
+        data.append("service", "PeruHfc1");
+        data.append("username", "dacar");
+        data.append("password", "O8Sw36BwGurYZcFU9vsa");
+        service = "PeruHfc1"
+      } else if(TSource === '02clarointernet'){
+        data.append("service", "PeruHfc2");
+        data.append("username", "dacar");
+        data.append("password", "O8Sw36BwGurYZcFU9vsa");
+        service = "PeruHfc2"
+      } else if(TSource === '03clarotv'){
+        data.append("service", "PeruHfc3");
+        data.append("username", "dacar");
+        data.append("password", "O8Sw36BwGurYZcFU9vsa");
+        service = "PeruHfc3"
+      } else if(TSource === '05claroperu'){
+        data.append("service", "PeruHfc5");
+        data.append("username", "dacar");
+        data.append("password", "O8Sw36BwGurYZcFU9vsa");
+        service = "PeruHfc5"
+      } else if(TSource === '06claromovil'){
+        data.append("service", "PeruMovilCallme");
+        data.append("username", "dacar");
+        data.append("password", "StzsK46vs0a4nCJU55wD");
+        service = "PeruMovilCallme"
+      } else if(pathname.includes('planes-moviles')){
+        data.append("service", "PeruMovilCallme");
+        data.append("username", "dacar");
+        data.append("password", "StzsK46vs0a4nCJU55wD");
+        service = "PeruMovilCallme"
+      } else {
+        data.append("service", "PeruHfcCallme");
+        data.append("username", "dacar");
+        data.append("password", "StzsK46vs0a4nCJU55wD");
+      }
+    
     }
 
     data.append("telephone", inputState);
