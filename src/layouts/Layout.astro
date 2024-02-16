@@ -10,7 +10,7 @@ import Notiscript from '../components/Notiscript.astro';
 
 <!doctype html>
 <html lang="es">
-	<head>
+	<head id="tag">
 		<Tag/>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -27,15 +27,22 @@ import Notiscript from '../components/Notiscript.astro';
 	  />
 	</head>
 	<>
-		<Header client:only="react"/>
 		<main>
-			<Nav client:only="react"/>
-		<slot />
+		
+	<Header client:only="react"/>
+
+		<Nav client:only="react"/>
+		<main>
+			<slot />
+		</main>
+
+
+	<Footer client:only="react"/>
+
 
 		</main>
-		<Footer client:only="react"/>
 
-		<Notiscript/>
+		<Notiscript :is:inline/>
 	<script>
 	</script>
   </html>
@@ -211,5 +218,6 @@ import Notiscript from '../components/Notiscript.astro';
 	  position: relative;
 	}
   }
+
   </style>
 

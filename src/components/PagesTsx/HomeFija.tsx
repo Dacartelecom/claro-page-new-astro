@@ -30,7 +30,7 @@ const OPTIONS: EmblaOptionsType = {
   slidesToScroll: 'auto',
   containScroll: 'trimSnaps'
 };
-const SLIDE_COUNT = 6;
+const SLIDE_COUNT = 7;
 const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 const STYLES_MOBILE: CSSProperties = {};
 const STYLES_DESKTOP: CSSProperties = {};
@@ -41,6 +41,7 @@ const imagesMobile = [
   `${BannerMobile5.src}`,
   `${BannerMobile6.src}`,
   `${BannerMobile2.src}`,
+  `${BannerMobile9.src}`,
   `${BannerMobile10.src}`,
 ];
 
@@ -50,6 +51,7 @@ const imagesDesktop= [
   `${BannerDesktop5.src}`,
   `${BannerDesktop6.src}`,
   `${BannerDesktop2.src}`,
+  `${BannerDesktop9.src}`,
   `${BannerDesktop10.src}`,
 ];
 
@@ -125,7 +127,7 @@ const ItemsPlanes: ItemsArray = [
         plan: '',
         classNamePlan: 'text-base',
         extraPlan: <div className="flex flex-col items-center justify-center">
-          <span className="text-[#ee122c] text-xl font-bold uppercase">1play 400 Mbps</span>
+          <span className="text-[#ee122c] text-3xl font-bold uppercase">1play 400 Mbps</span>
         </div>,
         data: [
           {
@@ -149,7 +151,7 @@ const ItemsPlanes: ItemsArray = [
         plan: '',
         classNamePlan: 'text-base',
         extraPlan: <div className="flex flex-col items-center justify-center">
-          <span className="text-[#ee122c] text-xl font-bold uppercase">1play 600 Mbps</span>
+          <span className="text-[#ee122c] text-3xl font-bold uppercase">1play 600 Mbps</span>
         </div>,
         data: [
           {
@@ -173,7 +175,7 @@ const ItemsPlanes: ItemsArray = [
         plan: '',
         classNamePlan: 'text-xl',
         extraPlan: <div className="flex flex-col items-center justify-center">
-          <span className="text-[#ee122c] text-xl font-bold uppercase">1play 1000 Mbps</span>
+          <span className="text-[#ee122c] text-3xl font-bold uppercase">1play 1000 Mbps</span>
         </div>,
         data: [
           {
@@ -193,7 +195,7 @@ const ItemsPlanes: ItemsArray = [
         plan: '',
         classNamePlan: 'text-xl',
         extraPlan: <div className="flex flex-col items-center justify-center">
-          <span className="text-[#ee122c] text-xl font-bold uppercase">1play 1500 Mbps</span>
+          <span className="text-[#ee122c] text-3xl font-bold uppercase">1play 1500 Mbps</span>
         </div>,
         data: [
           {
@@ -234,7 +236,7 @@ const ItemsPlanes: ItemsArray = [
             strong: '300Mbps'
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -262,7 +264,7 @@ const ItemsPlanes: ItemsArray = [
             strong: '500Mbps'
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -291,7 +293,7 @@ const ItemsPlanes: ItemsArray = [
             strong: '800Mbps'
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -319,7 +321,7 @@ const ItemsPlanes: ItemsArray = [
             strong: '1000Mbps'
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -343,7 +345,7 @@ const ItemsPlanes: ItemsArray = [
             strong: '1000Mbps'
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -367,7 +369,7 @@ const ItemsPlanes: ItemsArray = [
             strong: '1500Mbps'
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -575,7 +577,7 @@ const ItemsPlanes: ItemsArray = [
             description: 'Incluye Claro TV Avanzado con 111 canales en HD.',
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -605,7 +607,7 @@ const ItemsPlanes: ItemsArray = [
             description: 'Incluye Claro TV Avanzado con 111 canales en HD.',
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional',
           },
         ]
       },
@@ -635,7 +637,7 @@ const ItemsPlanes: ItemsArray = [
             description: 'Incluye Claro TV Avanzado con 111 canales en HD.',
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -666,7 +668,7 @@ const ItemsPlanes: ItemsArray = [
             description: 'Incluye Claro TV Avanzado con 111 canales en HD.',
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -692,7 +694,7 @@ const ItemsPlanes: ItemsArray = [
             description: 'Incluye Claro TV Avanzado con 111 canales en HD.',
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional.',
           },
         ]
       },
@@ -705,7 +707,6 @@ const ItemsPlanes: ItemsArray = [
         dscto: '',
         promo: 'Precio Regular',
         price: '265',
-        regular: 'Precio Regular S/484',
         plan: '',
         classNamePlan: 'text-xl',
         extraPlan: <div className="flex flex-col items-center justify-center">
@@ -720,7 +721,7 @@ const ItemsPlanes: ItemsArray = [
             description: 'Incluye Claro TV Avanzado con 111 canales en HD.',
           },
           {
-            description: 'Llamadas Ilimitadas a Teléfonos Fijos y Móviles de Claro + 100 min nivel nacional.',
+            description: 'MINUTOS ILIMITADOS a fijos y móviles de Claro Perú + 1000 MINUTOS para llamar a teléfonos fijos y móviles de otros operadores a nivel nacional',
           },
         ]
       },

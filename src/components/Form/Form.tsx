@@ -1,6 +1,6 @@
 import axios from "axios";
 import type { FormProps } from "../../interfaces/Form.props";
-import  { type ChangeEvent, type FC, useState } from "react";
+import  { type ChangeEvent, type FC, useState, useEffect } from "react";
 const Form: FC<FormProps> = ({
   className,
   textLabel,
@@ -20,7 +20,17 @@ const Form: FC<FormProps> = ({
   const [inputState, setInputState] = useState<string>('');
   const [TSource] = useState(params.get('T-source'));
   const [Gclid] = useState(params.get('gclid'));
+  const [actveUrl,setActiveUrl]=useState<boolean>(false)
+  const [url,setUrl]=useState<string>('');
+  const [param, setParam] = useState<string>('');
 
+  useEffect(() => {
+      if (TSource) {
+        setParam(`?T-source=${ TSource }`);
+      } else {
+        setParam('');
+      }
+    },[TSource]);
 
   const changeNumber = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -53,6 +63,13 @@ const Form: FC<FormProps> = ({
     };
   };
 
+  useEffect(() => {
+      if(pathname.includes('planes-moviles')){
+          setUrl('/planes-moviles')
+      }else{
+          setUrl('')
+      }
+  }, [url])
 
   const sendNumber = (e: any) => {
     e.preventDefault();
@@ -117,6 +134,11 @@ const Form: FC<FormProps> = ({
         data.append("username", "dacar");
         data.append("password", "StzsK46vs0a4nCJU55wD");
         service = "PeruMovilCallme"
+      }else if(TSource === 'rrss'){
+        data.append("service", "PeruHfcRsCallme");
+        data.append("username", "dacar");
+        data.append("password", "StzsK46vs0a4nCJU55wD");
+        service = "PeruHfcRsCallme";
       } else if(pathname.includes('planes-moviles')){
         data.append("service", "PeruMovilCallme");
         data.append("username", "dacar");
@@ -165,6 +187,13 @@ const Form: FC<FormProps> = ({
       console.log(service);
     });
   }
+  const handleRedirect = () => {
+    if(TSource === 'rrss'){
+    window.location.href = `/gracias/${ param }`;
+    }else{
+      null
+    }
+  };
 
   return (
     <form
@@ -192,6 +221,7 @@ const Form: FC<FormProps> = ({
       >*Ingrese su número sin anteponer el (51)</label>
       <div className="flex items-center justify-center">
         <button
+          onClick={handleRedirect}
           className={`relative font-extrabold text-lg py-2 px-6 uppercase flex items-center justify-center gap-2 ${ length === 9 ? 'opacity-100' : 'opacity-50' } ${ loading ? 'opacity-50' : '' } ${ classNameButton }`}
           type='submit'
           disabled={length === 9? false : true }

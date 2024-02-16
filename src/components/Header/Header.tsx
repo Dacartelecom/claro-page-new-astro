@@ -113,6 +113,13 @@ export const Header = () => {
               num: '(01) 6805992'
             });
             break;
+
+          case 'rrss':
+            setNumber({
+              tel: '016806269',
+              num: '(01) 6806269'
+            });
+            break;
         }
       } else {
         if (pathname.includes('planes-moviles')){
