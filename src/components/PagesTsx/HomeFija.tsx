@@ -1,4 +1,4 @@
-import type { EmblaOptionsType } from "embla-carousel-react";
+// import type { EmblaOptionsType } from "embla-carousel-react";
 import type { CSSProperties } from "react";
 import BannerDesktop1 from "../../../public/img/banner-desktop-1.webp";
 import BannerDesktop2 from "../../../public/img/banner-desktop-2.webp";
@@ -25,7 +25,8 @@ import Form from "../Form/Form";
 import Items from "../Items/Items";
 import type { ItemsArray } from "../../interfaces/Items.props";
 
-const OPTIONS: EmblaOptionsType = {
+// const OPTIONS: EmblaOptionsType = {
+const OPTIONS: any = {
   loop: true,
   slidesToScroll: 'auto',
   containScroll: 'trimSnaps'

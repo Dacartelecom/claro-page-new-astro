@@ -1,10 +1,11 @@
-import type { EmblaOptionsType } from "embla-carousel-react"
+// import type { EmblaOptionsType } from "embla-carousel-react"
 import type { CSSProperties } from "react"
 
 export interface CarouselProps {
   slides: number[]
   images?: string[]
-  options?: EmblaOptionsType
+  // options?: EmblaOptionsType
+  options?: any
   haveButtons?: boolean
   haveDots?: boolean
   styles?: CSSProperties

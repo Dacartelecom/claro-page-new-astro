@@ -1,4 +1,4 @@
-import type { StaticImageData } from "next/image"
+// import type { StaticImageData } from "next/image"
 import type { MouseEventHandler, ReactNode } from "react"
 
 export interface ItemsProps {
@@ -26,7 +26,8 @@ export interface PlanProps {
   className: string
   noHeader?: boolean
   mobileFooter?: boolean
-  src: string | StaticImageData
+  // src: string | StaticImageData
+  src: any
   alt: string
   width: number
   height: number

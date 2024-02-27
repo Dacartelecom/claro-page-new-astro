@@ -135,9 +135,9 @@ const Form: FC<FormProps> = ({
         data.append("password", "StzsK46vs0a4nCJU55wD");
         service = "PeruMovilCallme"
       }else if(TSource === 'rrss'){
-        data.append("service", "PeruHfcRsCallme");
+        data.append("service", "PeruHogarRrss");
         data.append("username", "dacar");
-        data.append("password", "StzsK46vs0a4nCJU55wD");
+        data.append("password", "O8Sw36BwGurYZcFU9vsa");
         service = "PeruHfcRsCallme";
       } else if(pathname.includes('planes-moviles')){
         data.append("service", "PeruMovilCallme");

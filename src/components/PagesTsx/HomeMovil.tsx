@@ -1,4 +1,4 @@
-import type { EmblaOptionsType } from "embla-carousel-react";
+// import type { EmblaOptionsType } from "embla-carousel-react";
 import type { CSSProperties } from "react";
 
 import PlanesMax from "../../../public/img/maxplay.webp";
@@ -27,7 +27,8 @@ import Items from "../Items/Items";
 import type { ItemsArray } from "../../interfaces/Items.props";
 import Form from "../Form/Form";
 
-const OPTIONS: EmblaOptionsType = {
+// const OPTIONS: EmblaOptionsType = {
+const OPTIONS: any = {
   loop: true,
   slidesToScroll: 'auto',
   containScroll: 'trimSnaps'

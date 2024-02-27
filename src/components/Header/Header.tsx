@@ -116,8 +116,8 @@ export const Header = () => {
 
           case 'rrss':
             setNumber({
-              tel: '016806269',
-              num: '(01) 6806269'
+              tel: '015009717',
+              num: '(01) 5009717'
             });
             break;
         }
