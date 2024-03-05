@@ -84,7 +84,7 @@ const Carousel: FC<CarouselProps> = ({
           >
             {slides.map((index) => (
               <div
-                className={ classNameSlide }
+                className={ `flex justify-center items-center ${classNameSlide}` }
                 key={index}
               >
                 {

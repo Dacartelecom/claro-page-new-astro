@@ -1,19 +1,5 @@
 // import type { EmblaOptionsType } from "embla-carousel-react";
 import type { CSSProperties } from "react";
-import BannerDesktop1 from "../../../public/img/banner-desktop-1.webp";
-import BannerDesktop2 from "../../../public/img/banner-desktop-2.webp";
-import BannerDesktop5 from "../../../public/img/banner-desktop-5.webp";
-import BannerDesktop6 from "../../../public/img/banner-desktop-6.webp";
-import BannerDesktop8 from "../../../public/img/banner-desktop-8.webp";
-import BannerDesktop9 from "../../../public/img/banner-desktop-9.webp";
-import BannerDesktop10 from "../../../public/img/banner-desktop-10.webp";
-import BannerMobile1 from "../../../public/img/banner-mobile-1.webp";
-import BannerMobile2 from "../../../public/img/banner-mobile-2.webp";
-import BannerMobile5 from "../../../public/img/banner-mobile-5.webp";
-import BannerMobile6 from "../../../public/img/banner-mobile-6.webp";
-import BannerMobile8 from "../../../public/img/banner-mobile-8.webp";
-import BannerMobile9 from "../../../public/img/banner-mobile-9.webp";
-import BannerMobile10 from "../../../public/img/banner-mobile-10.webp";
 import InternetTelefonia from "../../../public/img/internet-telefonia.webp";
 import InternetTelevision from "../../../public/img/internet-television.webp";
 import InternetTelefoniaTv from "../../../public/img/internet-telefonia-tv.webp";
@@ -22,8 +8,8 @@ import Internet from "../../../public/img/internet.webp";
 import LogoNetflix from "../../../public/img/logo-netflix.webp";
 import Carousel from "../Carousel/Carousel";
 import Form from "../Form/Form";
-import Items from "../Items/Items";
 import type { ItemsArray } from "../../interfaces/Items.props";
+import BodyCards from "../Planesbox/BodyCards";
 
 // const OPTIONS: EmblaOptionsType = {
 const OPTIONS: any = {
@@ -31,29 +17,26 @@ const OPTIONS: any = {
   slidesToScroll: 'auto',
   containScroll: 'trimSnaps'
 };
-const SLIDE_COUNT = 7;
+const SLIDE_COUNT = 5;
 const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 const STYLES_MOBILE: CSSProperties = {};
 const STYLES_DESKTOP: CSSProperties = {};
 
+
 const imagesMobile = [
-  `${BannerMobile1.src}`,
-  `${BannerMobile8.src}`,
-  `${BannerMobile5.src}`,
-  `${BannerMobile6.src}`,
-  `${BannerMobile2.src}`,
-  `${BannerMobile9.src}`,
-  `${BannerMobile10.src}`,
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-2.webp?alt=media&token=67c7863a-c221-4731-9ea5-129d55568972',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-3.webp?alt=media&token=cc1f4cb7-223b-4410-b0f0-7ead08ce5d66',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-4.webp?alt=media&token=ef31bda4-ad61-41cf-aa5c-0fb1f445476e',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-5.webp?alt=media&token=7ed20fb0-9f05-4fd5-b86e-d7b9a56953b6',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-6.webp?alt=media&token=34d691b5-33cd-45f9-8fa2-316298de312d',
 ];
 
-const imagesDesktop= [
-  `${BannerDesktop1.src}`,
-  `${BannerDesktop8.src}`,
-  `${BannerDesktop5.src}`,
-  `${BannerDesktop6.src}`,
-  `${BannerDesktop2.src}`,
-  `${BannerDesktop9.src}`,
-  `${BannerDesktop10.src}`,
+const imagesDesktop = [
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-2.webp?alt=media&token=0eca9204-256f-4ac8-a1ea-37f03f41d1b4',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-3.webp?alt=media&token=b383596d-95fd-496f-b43f-7e483b80f75d',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-4.webp?alt=media&token=782e424f-9850-44f9-9637-3e777ee1cc77',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-5.webp?alt=media&token=67306e0d-04e8-4a6e-b157-64bc975098c6',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-6.webp?alt=media&token=a98bf744-a835-401d-b96e-815349b98c46',
 ];
 
 const ItemsPlanes: ItemsArray = [
@@ -993,15 +976,13 @@ export default function HomeFija() {
         <h2 className="text-lg text-[#ee122c] text-center font-extrabold mb-4 xl:text-xl xl:font-bold">Contáctanos y conoce nuestros<br/>descuentos exclusivos</h2>
       </Form>
       <h1 className="text-3xl text-center text-[#ee122c] font-bold uppercase my-8">conoce nuestros planes hogar</h1>
-      <h3 className="text-sm text-center text-gray-500 font-bold">Todas las Ofertas y Promociones vigentes hasta el 29/02/2024 </h3>
+      <h3 className="text-sm text-center text-gray-500 font-bold">Todas las Ofertas y Promociones vigentes hasta el 15/03/2024 </h3>
       <div className="flex items-center justify-center gap-2 mb-10">
         <div className="bg-[#ee122c] w-24 h-1 mt-2"></div>
         <i className="fa-solid fa-house text-3xl text-[#ee1222]"></i>
         <div className="bg-[#ee122c] w-24 h-1 mt-2"></div>
       </div>
-      <Items
-        arrayItems={ ItemsPlanes }
-      />
+      <BodyCards/>
     </section>
   )
 }

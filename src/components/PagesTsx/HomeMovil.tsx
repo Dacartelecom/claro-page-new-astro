@@ -3,16 +3,6 @@ import type { CSSProperties } from "react";
 
 import PlanesMax from "../../../public/img/maxplay.webp";
 import PlanesNetflix from "../../../public/img/maxnet.webp";
-import BannerDesktop2 from "../../../public/img/moviles-banner-desktop-2.webp";
-import BannerDesktop3 from "../../../public/img/moviles-banner-desktop-3.webp";
-import BannerDesktop4 from "../../../public/img/moviles-banner-desktop-4.webp";
-import BannerDesktop5 from "../../../public/img/moviles-banner-desktop-5.webp";
-import BannerDesktop6 from "../../../public/img/moviles-banner-desktop-6.webp";
-import BannerMobile2 from "../../../public/img/moviles-banner-mobile-2.webp";
-import BannerMobile3 from "../../../public/img/moviles-banner-mobile-3.webp";
-import BannerMobile4 from "../../../public/img/moviles-banner-mobile-4.webp";
-import BannerMobile5 from "../../../public/img/moviles-banner-mobile-5.webp";
-import BannerMobile6 from "../../../public/img/moviles-banner-mobile-6.webp";
 import SocialMedia1 from "../../../public/img/social-media-1.webp";
 import SocialMedia2 from "../../../public/img/social-media-2.webp";
 import MotorolaG23 from "../../../public/img/motorola-g23.webp";
@@ -23,9 +13,9 @@ import OppoReno7 from "../../../public/img/oppo-reno7.webp";
 import OppoA78 from "../../../public/img/oppo-a78.webp";
 import MotorolaE30 from "../../../public/img/motorola-e30.webp";
 import Carousel from "../Carousel/Carousel";
-import Items from "../Items/Items"; 
 import type { ItemsArray } from "../../interfaces/Items.props";
 import Form from "../Form/Form";
+import BodyCardsMobil from "../Planesbox/BodyCardsMobil";
 
 // const OPTIONS: EmblaOptionsType = {
 const OPTIONS: any = {
@@ -43,20 +33,21 @@ const STYLES_DESKTOP: CSSProperties = {
 };
 
 const imagesMobile = [
-  `${BannerMobile2.src}`,
-  `${BannerMobile3.src}`,
-  `${BannerMobile4.src}`,
-  `${BannerMobile5.src}`,
-  `${BannerMobile6.src}`,
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-mobile-2.webp?alt=media&token=2a90b7ce-0026-4a18-83cb-7ce8eb9c7f08',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-mobile-3.webp?alt=media&token=24113125-2567-4dda-8995-8b5ea5e4aff1',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-mobile-4.webp?alt=media&token=c910724c-f92b-4529-abfb-1b6d18be3dc8',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-mobile-5.webp?alt=media&token=356c62f2-4304-4d75-92e5-3ade749957cb',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-mobile-6.webp?alt=media&token=7aa79648-8f3e-4dc0-b01a-6c0dae6faae7'
 ];
 
-const imagesDesktop = [
-  `${BannerDesktop2.src}`,
-  `${BannerDesktop3.src}`,
-  `${BannerDesktop4.src}`,
-  `${BannerDesktop5.src}`,
-  `${BannerDesktop6.src}`,
+const imagesDesktop= [
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-desktop-2.webp?alt=media&token=4b69451c-23b9-4734-a569-73dd9038df71',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-desktop-3.webp?alt=media&token=20f29b2d-bef0-4d52-9680-bfe494140bba',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-desktop-4.webp?alt=media&token=377df54b-53b8-4816-be75-c6997212f4f9',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-desktop-5.webp?alt=media&token=8d5a6c6f-690c-4708-b0ff-60a6c3af2121',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/moviles-banner-desktop-6.webp?alt=media&token=2fea9b26-4f35-46aa-b5e2-191f0920302e'
 ];
+
 
 const ItemsPlanes: ItemsArray = [
   {
@@ -1480,14 +1471,13 @@ export default function HomeMovil() {
         <h2 className="text-lg text-[#ee122c] text-center font-extrabold mb-4 xl:text-[17px] xl:font-bold">¡Consulta por la promoción en<br/>PORTABILIDAD que tenemos para ti!</h2>
       </Form>
       <h1 className="text-3xl text-center text-[#ee122c] font-bold uppercase my-8">conoce nuestros planes moviles</h1>
-      <h3 className="text-sm text-center text-gray-500 font-bold">Todas las Ofertas y Promociones vigentes hasta el 29/02/2024</h3>
+      <h3 className="text-sm text-center text-gray-500 font-bold">Todas las Ofertas y Promociones vigentes hasta el 15/03/2024</h3>
       <div className="flex items-center justify-center gap-2 mb-10">
         <div className="bg-[#ee122c] w-24 h-1 mt-2"></div>
         <i className="fa-solid fa-mobile-screen-button text-3xl text-[#ee1222]"></i>
         <div className="bg-[#ee122c] w-24 h-1 mt-2"></div>
       </div>
-      <Items
-        arrayItems={ ItemsPlanes }
+      <BodyCardsMobil
       />
     </section>
   )
