@@ -1471,7 +1471,7 @@ export default function HomeMovil() {
         <h2 className="text-lg text-[#ee122c] text-center font-extrabold mb-4 xl:text-[17px] xl:font-bold">¡Consulta por la promoción en<br/>PORTABILIDAD que tenemos para ti!</h2>
       </Form>
       <h1 className="text-3xl text-center text-[#ee122c] font-bold uppercase my-8">conoce nuestros planes moviles</h1>
-      <h3 className="text-sm text-center text-gray-500 font-bold">Todas las Ofertas y Promociones vigentes hasta el 15/03/2024</h3>
+      <h3 className="text-sm text-center text-gray-500 font-bold">Todas las Ofertas y Promociones vigentes hasta el 31/03/2024</h3>
       <div className="flex items-center justify-center gap-2 mb-10">
         <div className="bg-[#ee122c] w-24 h-1 mt-2"></div>
         <i className="fa-solid fa-mobile-screen-button text-3xl text-[#ee1222]"></i>

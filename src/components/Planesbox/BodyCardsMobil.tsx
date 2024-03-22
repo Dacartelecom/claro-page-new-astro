@@ -149,7 +149,7 @@ const BodyCardsMobil = () => {
               },{
                 text:'Gigas del plan con Full Claro: 37.5 GB'
               },{
-                text:'Minutos Internacionales 350 minutos'
+                text:'Minutos Internacionales: 350'
               },{
                 text:'Redes sociales ilimitadadas (Instagram, Facebook, Messenger, Waze, Whatsapp)'
               }
@@ -174,9 +174,9 @@ const BodyCardsMobil = () => {
               },{
                 text:'Gigas del plan con Full Claro: 52.5 GB'
               },{
-                text:'Llamadas y SMS Ilimitados'
+                text:'Minutos Internacionales: 400'
               },{
-                text:'Redes sociales ilimitadadas (Instagram, Facebook, Messenger, Waze, Whatsapp, Twitter)'
+                text:'Redes sociales ilimitadadas (Instagram, Facebook, Messenger, Waze, Whatsapp, X)'
               }
             ],       
             subtext:'al mes',     
@@ -191,7 +191,7 @@ const BodyCardsMobil = () => {
           fullClaro:true,
           subtext3:'Por solo',
           children:<div>
-            <span className='uppercase'>ILIMITADO <br /></span> <span className='font-normal'>Minutos + SMS Nacionales y Llamadas Internacionales</span>
+            <span className='uppercase'>ILIMITADO <br /></span> <span className='font-normal'>Minutos y SMS Nacionales + Llamadas Internacionales</span>
           </div>,
             conditions:[
               {
@@ -201,7 +201,7 @@ const BodyCardsMobil = () => {
               },{
                 text:'Llamadas y SMS Ilimitados'
               },{
-                text:'Redes sociales ilimitadadas (Instagram, Facebook, Messenger, Waze, Whatsapp, Twitter)'
+                text:'Redes sociales ilimitadadas (Instagram, Facebook, Messenger, Waze, Whatsapp, X)'
               }
             ],        
             subtext:'al mes',            
@@ -222,7 +222,7 @@ const BodyCardsMobil = () => {
               {
                 text:'Gigas del plan en alta velocidad : 95 GB'
               },{
-                text:'Gigas del plan en alta velocidad con Full Claro: 195 GB'
+                text:'Gigas del plan en alta velocidad con Full Claro: 142.5 GB'
               },{
                 text:'Llamadas y SMS Ilimitados'
               }
