@@ -603,7 +603,7 @@ const BodyCardsMobil = () => {
             break;
   
           case '05claroperu':
-            setNumberCall(() => '(01) 6806545');
+            setNumberCall(() => '(01) 7017612');
             break;
   
           case '06claromovil':
