@@ -56,6 +56,10 @@ const Form: FC<FormProps> = ({
     try {
       const res = await axios.post('https://develzpbx.site/api/call-me',{
         number
+      },{
+        headers: {
+          "X-URL-Complete": window.location.href
+        }
       });
       console.log(res)
     } catch (error) {
