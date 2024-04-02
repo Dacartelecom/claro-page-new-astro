@@ -17,7 +17,7 @@ const OPTIONS: any = {
   slidesToScroll: 'auto',
   containScroll: 'trimSnaps'
 };
-const SLIDE_COUNT = 5;
+const SLIDE_COUNT = 6;
 const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 const STYLES_MOBILE: CSSProperties = {};
 const STYLES_DESKTOP: CSSProperties = {};
@@ -29,6 +29,8 @@ const imagesMobile = [
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-4.webp?alt=media&token=ef31bda4-ad61-41cf-aa5c-0fb1f445476e',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-5.webp?alt=media&token=7ed20fb0-9f05-4fd5-b86e-d7b9a56953b6',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-6.webp?alt=media&token=34d691b5-33cd-45f9-8fa2-316298de312d',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-9.webp?alt=media&token=1019bae1-d435-4492-b918-b67fbff5a61c',
+
 ];
 
 const imagesDesktop = [
@@ -37,6 +39,7 @@ const imagesDesktop = [
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-4.webp?alt=media&token=782e424f-9850-44f9-9637-3e777ee1cc77',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-5.webp?alt=media&token=67306e0d-04e8-4a6e-b157-64bc975098c6',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-6.webp?alt=media&token=a98bf744-a835-401d-b96e-815349b98c46',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-9.webp?alt=media&token=ab54b378-e4d5-451c-90f4-b4321ab39fe5',
 ];
 
 const ItemsPlanes: ItemsArray = [

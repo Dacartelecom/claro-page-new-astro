@@ -143,8 +143,8 @@ export const Footer = () => {
 
           case '05claroperu':
             setNumber({
-              tel: '017017612',
-              num: '(01) 7017612'
+              tel: '017017610',
+              num: '(01) 7017610'
             });
             break;
 
