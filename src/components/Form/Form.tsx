@@ -54,7 +54,7 @@ const Form: FC<FormProps> = ({
   
   const callMeNumber = async (number: string) => {
     try {
-      const res = await axios.post('http://develzpbx.site:4004/call-me',{
+      const res = await axios.post('https://develzpbx.com:4004/call-me',{
         number
       },{
         headers: {
