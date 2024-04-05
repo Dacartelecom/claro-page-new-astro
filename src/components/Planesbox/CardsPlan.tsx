@@ -18,10 +18,11 @@ export const CardsPlan:FC<CardsPlanProps> = ({
     subtext,
     shadow,
     subtext3,
-    subtext2
+    subtext2,
+    small
 }) => {
   return (
-    <div className='w-[350px] h-[850px]  text-white flex flex-col max-lg:w-[280px] mt-[50px] '>
+    <div className={`w-[350px] ${small?'h-[650px]':'h-[800px]' }  text-white flex flex-col max-lg:w-[280px] mt-[50px]`}>
     {shadow && <div className='h-auto bg-white rounded-3xl shadow-md shadow-black overflow-hidden text-black relative'>
         {descuento && <div className='text-white bg-[#FE0000] w-[150px] h-[150px] float-right flex items-end justify-center rotate-45 right-[-75px] top-[-75px] absolute text-[25px]'>{promocion}</div>}
     <div className='w-full p-7 max-lg:px-5 flex flex-col'>

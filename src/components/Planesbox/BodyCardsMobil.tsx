@@ -60,7 +60,8 @@ const BodyCardsMobil = () => {
       subtext,
       shadow,
       subtext2,
-      subtext3
+      subtext3,
+      small
     } = item;
   
     return (
@@ -80,6 +81,7 @@ const BodyCardsMobil = () => {
       subtext2={subtext2}
       shadow={shadow}
       subtext3={subtext3}
+      small={small}
       >
         {children}
       </CardsPlan>

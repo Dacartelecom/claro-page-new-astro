@@ -20,7 +20,7 @@ const SUB_SECTIONS: Array<Array<string>> = [
     'INTERNET + TELEVISIÓN',
     'INTERNET + TELEFONÍA + TV',
     'CLARO HOGAR + NETFLIX',
-    'INTERNET- FIJO INALAMBRICO'
+    'INTERNET FIJO INALAMBRICO'
   ]
 ];
 
@@ -51,6 +51,7 @@ const BodyCards = () => {
       subtext2,
       mobile,
       subtext3,
+      small,
       shadow
     } = item;
   
@@ -69,6 +70,7 @@ const BodyCards = () => {
       subtext2={subtext2}
       shadow={shadow}
       subtext3={subtext3}
+      small={small}
       >
         {children}
       </CardsPlan>
@@ -133,34 +135,36 @@ const BodyCards = () => {
         subtext3:'Por solo',
         conditions:[
           {
-            text:'Velocidad máxima 150 Mbps'
+            text:'Velocidad máxima: 150 Mbps'
           },{
-            text:'Velocidad máxima con Full Claro 300 Mbps'
+            text:'Velocidad máxima con Full Claro: 300 Mbps'
           },{
             text:'Suscripción gratuita a ClaroVideo'
           }
         ],
         subtext:'al mes',
-        onClick: viewModal
+        small:true,
+        onClick: viewModal,
       },{
         shadow:true,
         plan:'INTERNET HFC / FTTH',
-        megas:'250 Mbps',
+        megas:'300 Mbps',
         price:'S/ 75',
         descuento:null,
         fullClaro:null,
         subtext3:'Por solo',
         conditions:[
           {
-            text:'Velocidad máxima 250 Mbps'
+            text:'Velocidad máxima: 300 Mbps'
           },{
-            text:'Velocidad máxima con Full Claro 500 Mbps'
+            text:'Velocidad máxima con Full Claro: 600 Mbps'
           },{
             text:'Suscripción gratuita a ClaroVideo'
           }
         ],
         subtext:'al mes',
-        onClick: viewModal
+        small:true,
+        onClick: viewModal,
       },{
         shadow:true,
         plan:'INTERNET HFC / FTTH',
@@ -171,14 +175,15 @@ const BodyCards = () => {
         subtext3:'Por solo',
         conditions:[
           {
-            text:'Velocidad máxima 400 Mbps'
+            text:'Velocidad máxima: 400 Mbps'
           },{
-            text:'Velocidad máxima con Full Claro 800 Mbps'
+            text:'Velocidad máxima con Full Claro: 800 Mbps'
           },{
             text:'Suscripción gratuita a ClaroVideo'
           }
         ],
         subtext:'al mes',
+        small:true,
         onClick: viewModal
       },{
         shadow:true,
@@ -190,14 +195,15 @@ const BodyCards = () => {
         subtext3:'Por solo',
         conditions:[
           {
-            text:'Velocidad máxima 600 Mbps'
+            text:'Velocidad máxima: 600 Mbps'
           },{
-            text:'Velocidad máxima con Full Claro 1000 Mbps'
+            text:'Velocidad máxima con Full Claro: 1000 Mbps'
           },{
             text:'Suscripción gratuita a ClaroVideo'
           }
         ],
         subtext:'al mes',
+        small:true,
         onClick: viewModal
       },{
         shadow:true,
@@ -209,12 +215,13 @@ const BodyCards = () => {
         subtext3:'Por solo',
         conditions:[
           {
-            text:'Velocidad máxima 1000 Mbps'
+            text:'Velocidad máxima: 1000 Mbps'
           },{
             text:'Suscripción gratuita a ClaroVideo'
           }
         ],
         subtext:'al mes',
+        small:true,
         onClick: viewModal
       },{
         shadow:true,
@@ -226,13 +233,15 @@ const BodyCards = () => {
         subtext3:'Por solo',
         conditions:[
           {
-            text:'Velocidad máxima 1500 Mbps'
+            text:'Velocidad máxima: 1500 Mbps'
           },{
             text:'Suscripción gratuita a ClaroVideo'
           }
         ],
         subtext:'al mes',
+        small:true,
         onClick: viewModal
+        
       }
       ],
       [ /* INTERNET + TELEFONÍA  */
@@ -240,15 +249,15 @@ const BodyCards = () => {
           shadow:true,
           plan:'INTERNET + TELEFONÍA',
           megas:'150 Mbps',
-          price:'S/ 70',
+          price:'S/ 66',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
           {
-            text:'Velocidad máxima 150 Mbps'
+            text:'Velocidad máxima: 150 Mbps'
           },{
-            text:'Velocidad máxima con Full Claro 300 Mbps'
+            text:'Velocidad máxima con Full Claro: 300 Mbps'
           },{
             text:'MINUTOS ILIMITADOS a fijos y móviles de Claro + 1000 MINUTOS a otras operadoras'
           },{
@@ -256,21 +265,22 @@ const BodyCards = () => {
           }
         ],
           subtext:'al mes',
+          small:true,
           onClick: viewModal
         },
         {
           shadow:true,
           plan:'INTERNET + TELEFONÍA',
-          megas:'250 Mbps',
-          price:'S/ 80',
+          megas:'300 Mbps',
+          price:'S/ 76',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 250 Mbps'
+              text:'Velocidad máxima: 300 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 500 Mbps'
+              text:'Velocidad máxima con Full Claro: 600 Mbps'
             },{
               text:'MINUTOS ILIMITADOS a fijos y móviles de Claro + 1000 MINUTOS a otras operadoras'
             },{
@@ -278,21 +288,22 @@ const BodyCards = () => {
             }
           ],
           subtext:'al mes',
+          small:true,
           onClick: viewModal
         },
         {
           shadow:true,
           plan:'INTERNET + TELEFONÍA',
           megas:'400 Mbps',
-          price:'S/ 90',
+          price:'S/ 86',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 400 Mbps'
+              text:'Velocidad máxima: 400 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 800 Mbps'
+              text:'Velocidad máxima con Full Claro: 800 Mbps'
             },{
               text:'MINUTOS ILIMITADOS a fijos y móviles de Claro + 1000 MINUTOS a otras operadoras'
             },{
@@ -300,68 +311,72 @@ const BodyCards = () => {
             }
           ],
           subtext:'al mes',
+          small:true,
           onClick: viewModal
         },
         {
           shadow:true,
           plan:'INTERNET + TELEFONÍA',
           megas:'600 Mbps',
-          price:'S/ 105',
+          price:'S/ 101',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 600 Mbps'
+              text:'Velocidad máxima: 600 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 1000 Mbps'
+              text:'Velocidad máxima con Full Claro: 1000 Mbps'
             },{
               text:'MINUTOS ILIMITADOS a fijos y móviles de Claro + 1000 MINUTOS a otras operadoras'
             },{
               text:'Suscripción gratuita a ClaroVideo'
             }
           ],     
-          subtext:'al mes',     
+          subtext:'al mes',
+          small:true,     
           onClick: viewModal
         },
         {
           shadow:true,
           plan:'INTERNET + TELEFONÍA',
           megas:'1000 Mbps',
-          price:'S/ 150',
+          price:'S/ 146',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 1000 Mbps'
+              text:'Velocidad máxima: 1000 Mbps'
             },{
               text:'MINUTOS ILIMITADOS a fijos y móviles de Claro + 1000 MINUTOS a otras operadoras'
             },{
               text:'Suscripción gratuita a ClaroVideo'
             }
           ],    
-          subtext:'al mes',      
+          subtext:'al mes',    
+          small:true,  
           onClick: viewModal
         },
         {
           shadow:true,
           plan:'INTERNET + TELEFONÍA',
           megas:'1500 Mbps',
-          price:'S/ 205',
+          price:'S/ 201',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 1000 Mbps'
+              text:'Velocidad máxima: 1000 Mbps'
             },{
               text:'MINUTOS ILIMITADOS a fijos y móviles de Claro + 1000 MINUTOS a otras operadoras'
             },{
               text:'Suscripción gratuita a ClaroVideo'
             }
           ],      
-          subtext:'al mes',      
+          subtext:'al mes',  
+          small:true,    
           onClick: viewModal
         }
       ],      
@@ -376,9 +391,9 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 150 Mbps'
+              text:'Velocidad máxima: 150 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 300 Mbps'
+              text:'Velocidad máxima con Full Claro: 300 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -386,28 +401,30 @@ const BodyCards = () => {
             }
           ],          
           subtext:'al mes',     
+          small:true,
           onClick: viewModal
         },
         {
           shadow:true,
           plan:'INTERNET + TELEVISIÓN',
-          megas:'250 Mbps',
+          megas:'300 Mbps',
           price:'S/ 135',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 250 Mbps'
+              text:'Velocidad máxima: 300 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 500 Mbps'
+              text:'Velocidad máxima con Full Claro: 600 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
               text:'Suscripción gratuita a ClaroVideo'
             }
           ],       
-          subtext:'al mes',      
+          subtext:'al mes',   
+          small:true,   
           onClick: viewModal
         },
         {
@@ -420,16 +437,17 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 400 Mbps'
+              text:'Velocidad máxima: 400 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 800 Mbps'
+              text:'Velocidad máxima con Full Claro: 800 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
               text:'Suscripción gratuita a ClaroVideo'
             }
           ],      
-          subtext:'al mes',         
+          subtext:'al mes',    
+          small:true,     
           onClick: viewModal
         },
         {
@@ -442,16 +460,17 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 600 Mbps'
+              text:'Velocidad máxima: 600 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 1000 Mbps'
+              text:'Velocidad máxima con Full Claro: 1000 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
               text:'Suscripción gratuita a ClaroVideo'
             }
           ],    
-          subtext:'al mes',         
+          subtext:'al mes',       
+          small:true,  
           onClick: viewModal
         },
         {
@@ -464,7 +483,7 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 1000 Mbps'
+              text:'Velocidad máxima: 1000 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -472,6 +491,7 @@ const BodyCards = () => {
             }
           ],     
           subtext:'al mes',      
+          small:true,
           onClick: viewModal
         },
         {
@@ -484,7 +504,7 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 1500 Mbps'
+              text:'Velocidad máxima: 1500 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -494,6 +514,7 @@ const BodyCards = () => {
             }
           ],      
           subtext:'al mes',     
+          small:true,
           onClick: viewModal
         }
       ],      
@@ -502,15 +523,15 @@ const BodyCards = () => {
           shadow:true,
           plan:'INTERNET + TELEFONÍA + TV',
           megas:'150 Mbps',
-          price:'S/ 135',
+          price:'S/ 131',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 150 Mbps'
+              text:'Velocidad máxima: 150 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 300 Mbps'
+              text:'Velocidad máxima con Full Claro: 300 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -525,16 +546,16 @@ const BodyCards = () => {
         {
           shadow:true,
           plan:'INTERNET + TELEFONÍA + TV',
-          megas:'250 Mbps',
-          price:'S/ 145',
+          megas:'300 Mbps',
+          price:'S/ 141',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 250 Mbps'
+              text:'Velocidad máxima: 300 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 500 Mbps'
+              text:'Velocidad máxima con Full Claro: 600 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -550,15 +571,15 @@ const BodyCards = () => {
           shadow:true,
           plan:'INTERNET + TELEFONÍA + TV',
           megas:'400 Mbps',
-          price:'S/ 150',
+          price:'S/ 146',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 400 Mbps'
+              text:'Velocidad máxima: 400 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 800 Mbps'
+              text:'Velocidad máxima con Full Claro: 800 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -574,15 +595,15 @@ const BodyCards = () => {
           shadow:true,
           plan:'INTERNET + TELEFONÍA + TV',
           megas:'600 Mbps',
-          price:'S/ 165',
+          price:'S/ 161',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 600 Mbps'
+              text:'Velocidad máxima: 600 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 1000 Mbps'
+              text:'Velocidad máxima con Full Claro: 1000 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -598,13 +619,13 @@ const BodyCards = () => {
           shadow:true,
           plan:'INTERNET + TELEFONÍA + TV',
           megas:'1000 Mbps',
-          price:'S/ 210',
+          price:'S/ 206',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 1000 Mbps'
+              text:'Velocidad máxima: 1000 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -620,13 +641,13 @@ const BodyCards = () => {
           shadow:true,
           plan:'INTERNET + TELEFONÍA + TV',
           megas:'1500 Mbps',
-          price:'S/ 265',
+          price:'S/ 261',
           descuento:null,
           fullClaro:null,
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 1500 Mbps'
+              text:'Velocidad máxima: 1500 Mbps'
             },{
               text:'Incluye Claro TV Avanzado con 111 canales en HD.'
             },{
@@ -651,9 +672,9 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 100 Mbps'
+              text:'Velocidad máxima: 100 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 200 Mbps'
+              text:'Velocidad máxima con Full Claro: 200 Mbps'
             },{
               text:'Incluye NETFLIX Estándar con 2 Pantallas HD'
             },{
@@ -675,9 +696,9 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 180 Mbps'
+              text:'Velocidad máxima: 180 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 360 Mbps'
+              text:'Velocidad máxima con Full Claro: 360 Mbps'
             },{
               text:'Incluye NETFLIX Estándar con 2 Pantallas HD'
             },{
@@ -699,9 +720,9 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 180 Mbps'
+              text:'Velocidad máxima: 180 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 360 Mbps'
+              text:'Velocidad máxima con Full Claro: 360 Mbps'
             },{
               text:'Incluye NETFLIX Estándar con 2 Pantallas HD'
             },{
@@ -725,9 +746,9 @@ const BodyCards = () => {
           subtext3:'Por solo',
           conditions:[
             {
-              text:'Velocidad máxima 280 Mbps'
+              text:'Velocidad máxima: 280 Mbps'
             },{
-              text:'Velocidad máxima con Full Claro 560 Mbps'
+              text:'Velocidad máxima con Full Claro: 560 Mbps'
             },{
               text:'Incluye NETFLIX Estándar con 2 Pantallas HD'
             },{

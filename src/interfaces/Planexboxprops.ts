@@ -45,6 +45,7 @@ export interface ContainerboxProps {
     subtext2?:string
     shadow?:boolean
     subtext3?:string
+    small:boolean
   }
 
   export interface conditionPlan{
