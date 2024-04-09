@@ -24,22 +24,22 @@ const STYLES_DESKTOP: CSSProperties = {};
 
 
 const imagesMobile = [
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-2.webp?alt=media&token=67c7863a-c221-4731-9ea5-129d55568972',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-3.webp?alt=media&token=cc1f4cb7-223b-4410-b0f0-7ead08ce5d66',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-4.webp?alt=media&token=ef31bda4-ad61-41cf-aa5c-0fb1f445476e',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-5.webp?alt=media&token=7ed20fb0-9f05-4fd5-b86e-d7b9a56953b6',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-6.webp?alt=media&token=34d691b5-33cd-45f9-8fa2-316298de312d',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-mobile-9.webp?alt=media&token=1019bae1-d435-4492-b918-b67fbff5a61c',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-08B-MOBBILE.webp?alt=media&token=8a77b221-f9ef-4239-be53-251eb78947e5',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-07B-MOBBILE.webp?alt=media&token=13d3b590-3c38-40e5-a703-fe5d533b883a',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-06B-MOBBILE.webp?alt=media&token=9242a0f0-878e-41f9-8b29-1eb300c058d2',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-09B-MOBBILE.webp?alt=media&token=da2bcf2c-112c-4a6c-acae-8b0bbc2055d5',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-13B-MOBBILE.webp?alt=media&token=7344b15a-477a-4b25-be43-4a997ea6f228',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-10-MOBBILE.webp?alt=media&token=8b166c4d-4af7-42cf-862f-5e6f55834e68',
 
 ];
 
 const imagesDesktop = [
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-2.webp?alt=media&token=0eca9204-256f-4ac8-a1ea-37f03f41d1b4',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-3.webp?alt=media&token=b383596d-95fd-496f-b43f-7e483b80f75d',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-4.webp?alt=media&token=782e424f-9850-44f9-9637-3e777ee1cc77',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-5.webp?alt=media&token=67306e0d-04e8-4a6e-b157-64bc975098c6',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-6.webp?alt=media&token=a98bf744-a835-401d-b96e-815349b98c46',
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/banner-desktop-9.webp?alt=media&token=ab54b378-e4d5-451c-90f4-b4321ab39fe5',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-08B.webp?alt=media&token=4616968e-4fcb-43ce-91f8-8f25ce4168c6',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-07B.webp?alt=media&token=8d587110-4164-49df-93fb-802139fb07d9',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-06B.webp?alt=media&token=060c8d29-fe19-4198-804f-249b2eaf2033',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-09B.webp?alt=media&token=652f8bb6-3296-4e62-9727-1cc29367c0c4',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-13B.webp?alt=media&token=a2ce09db-a9bc-4dc7-bd6d-b85127cbddd4',
+  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-10.webp?alt=media&token=43c80bb7-4bb6-4e15-a1ef-97cf3fa0d217',
 ];
 
 const ItemsPlanes: ItemsArray = [
