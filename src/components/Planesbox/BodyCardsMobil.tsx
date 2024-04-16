@@ -375,7 +375,7 @@ const BodyCardsMobil = () => {
       [ /* PLANES MAX PLAY CON NETFLIX  */
         {
           shadow:true,
-          plan:'PLANES MAX PLAY CON NETFLIX',
+          plan:'Plan Max Play 95 con Netflix',
           megas:'70 GB',
           price:'S/ 95',
           descuento:null,
@@ -400,7 +400,7 @@ const BodyCardsMobil = () => {
         },
         {
           shadow:true,
-          plan:'PLANES MAX PLAY CON NETFLIX',
+          plan:'Plan Max Play 115 con Netflix',
           megas:'100 GB',
           price:'S/ 115',
           descuento:null,
@@ -425,7 +425,7 @@ const BodyCardsMobil = () => {
         },
         {
           shadow:true,
-          plan:'PLANES MAX PLAY CON NETFLIX',
+          plan:'Plan Max Play 145 con Netflix',
           megas:'145 GB',
           price:'S/ 145',
           descuento:null,
