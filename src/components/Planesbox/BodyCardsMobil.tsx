@@ -372,11 +372,11 @@ const BodyCardsMobil = () => {
         }
       ],
 
-      [ /* INTERNET + TELEFONÍA  */
+      [ /* PLANES MAX PLAY CON NETFLIX  */
         {
           shadow:true,
           plan:'PLANES MAX PLAY CON NETFLIX',
-          megas:'55 GB',
+          megas:'70 GB',
           price:'S/ 95',
           descuento:null,
           fullClaro:true,
@@ -386,11 +386,11 @@ const BodyCardsMobil = () => {
           </div>,
           conditions:[
             {
-              text:'GB en alta velocidad: 55 GB'
+              text:'GB en alta velocidad: 70 GB'
             },{
-              text:'GB en alta velocidad con Full Claro: 82.5 GB'
+              text:'GB en alta velocidad con Full Claro: 105 GB'
             },{
-              text:'Llamadas y SMS Ilimitados'
+              text:'Cobertura internacional: 300 minutos, 3GB DE internet y 300 SMS'
             },{
               text:'Netflix 2 pantallas HD'
             }
@@ -415,7 +415,7 @@ const BodyCardsMobil = () => {
             },{
               text:'GB en alta velocidad con Full Claro: 150 GB'
             },{
-              text:'Llamadas y SMS Ilimitados'
+              text:'Cobertura internacional: 350 minutos, 3.5GB DE internet y 350 SMS'
             },{
               text:'Netflix 4 Pantallas HD, Ultra HD o 4K'
             }
@@ -440,7 +440,7 @@ const BodyCardsMobil = () => {
             },{
               text:'GB en alta velocidad con Full Claro: 217.5 GB'
             },{
-              text:'Llamadas y SMS Ilimitados'
+              text:'Cobertura internacional: 450 minutos, 10GB DE internet y 450 SMS'
             },{
               text:'Netflix 4 Pantallas HD, Ultra HD o 4K'
             }
@@ -597,11 +597,11 @@ const BodyCardsMobil = () => {
       if (tSource) {
         switch (tSource) {
           case '01clarohogar':
-            setNumberCall(() => '(01) 6806301');
+            setNumberCall(() => '(01) 7028541');
             break;
   
           case '02clarointernet':
-            setNumberCall(() => '(01) 6806302');
+            setNumberCall(() => '(01) 7028545');
             break;
   
           case '05claroperu':
