@@ -597,11 +597,11 @@ const BodyCardsMobil = () => {
       if (tSource) {
         switch (tSource) {
           case '01clarohogar':
-            setNumberCall(() => '(01) 6806301');
+            setNumberCall(() => '(01) 7028541');
             break;
   
           case '02clarointernet':
-            setNumberCall(() => '(01) 6806302');
+            setNumberCall(() => '(01) 7028547');
             break;
   
           case '05claroperu':

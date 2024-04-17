@@ -81,15 +81,15 @@ export const Header = () => {
         switch (TSource) {
           case '01clarohogar':
             setNumber({
-              tel: '016806301',
-              num: '(01) 6806301'
+              tel: '017028541',
+              num: '(01) 7028541'
             });
             break;
   
           case '02clarointernet':
             setNumber({
-              tel: '016806302',
-              num: '(01) 6806302'
+              tel: '017028547',
+              num: '(01) 7028547'
             });
             break;
   
@@ -102,8 +102,8 @@ export const Header = () => {
   
           case '05claroperu':
             setNumber({
-              tel: '016806545',
-              num: '(01) 6806545'
+              tel: '017017611',
+              num: '(01) 7017611'
             });
             break;
   
