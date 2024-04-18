@@ -850,11 +850,11 @@ const BodyCards = () => {
       if (tSource) {
         switch (tSource) {
           case '01clarohogar':
-            setNumberCall(() => '(01) 7028541');
+            setNumberCall(() => '(01) 6806301');
             break;
   
           case '02clarointernet':
-            setNumberCall(() => '(01) 7028547');
+            setNumberCall(() => '(01) 6806302');
             break;
   
           case '03clarotv':
@@ -862,7 +862,7 @@ const BodyCards = () => {
             break;
   
           case '05claroperu':
-            setNumberCall(() => '(01) 7017611');
+            setNumberCall(() => '(01) 6806545');
             break;
   
           case '06claromovil':
