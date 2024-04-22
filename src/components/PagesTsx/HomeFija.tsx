@@ -24,7 +24,6 @@ const STYLES_DESKTOP: CSSProperties = {};
 
 
 const imagesMobile = [
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-08-MOBBILE.webp?alt=media&token=a48054d3-7ac7-4be0-837e-d03e59d9be4a',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-07-MOBBILE.webp?alt=media&token=47cb7536-1587-4860-b9ea-deb10a7bb620',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-06-MOBBILE.webp?alt=media&token=79885bd0-d5b6-4da5-bbb8-768eb7c09a71',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-09-MOBBILE.webp?alt=media&token=6ff62887-90a6-4e35-9177-fc49d2e46e5e',
@@ -33,7 +32,6 @@ const imagesMobile = [
 ];
 
 const imagesDesktop = [
-  'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-08.webp?alt=media&token=9c83720f-6bf7-4478-844b-25f2887f9237',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-07.webp?alt=media&token=1ee1ccac-bcb8-4fc1-8c86-9d28f637d998',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-06.webp?alt=media&token=56651700-6ad4-456b-ad9e-a234ada6cacd',
   'https://firebasestorage.googleapis.com/v0/b/win-dacar.appspot.com/o/IMG-BANNER-09.webp?alt=media&token=3f3d7e95-6568-421f-a646-2504e879899c',
