@@ -73,50 +73,49 @@ export const Footer = () => {
 
   useEffect(() => {
     if (nombreDelDominio.includes("clarofertas")) {
-      if (TSource) {
-        switch (TSource) {
-          case 'ext':
-            setNumber({
-              tel: '016806465',
-              num: '(01) 6806465'
-            });
-            break;
+      // if (TSource) {
+      //   switch (TSource) {
+      //     case 'ext':
+      //       setNumber({
+      //         tel: '016806465',
+      //         num: '(01) 6806465'
+      //       });
+      //       break;
 
-          case 'ext_1':
-            setNumber({
-              tel: '016806268',
-              num: '(01) 6806268'
-            });
-            break;
+      //     case 'ext_1':
+      //       setNumber({
+      //         tel: '016806268',
+      //         num: '(01) 6806268'
+      //       });
+      //       break;
 
-          case 'ext_2':
-            setNumber({
-              tel: '016806466',
-              num: '(01) 6806466'
-            });
-            break;
+      //     case 'ext_2':
+      //       setNumber({
+      //         tel: '016806466',
+      //         num: '(01) 6806466'
+      //       });
+      //       break;
 
-          case 'ext_3':
-            setNumber({
-              tel: '6806269',
-              num: '(01) 6806269'
-            });
-            break;
-        }
+      //     case 'ext_3':
+      //       setNumber({
+      //         tel: '6806269',
+      //         num: '(01) 6806269'
+      //       });
+      //       break;
+      //   }
+      // } else {
+      // }
+      if (pathname.includes('planes-moviles')) {
+        setNumber({
+          tel: '016806465',
+          num: '(01) 6806465'
+        });
       } else {
-        if (pathname.includes('planes-moviles')) {
-          setNumber({
-            tel: '016806465',
-            num: '(01) 6806465'
-          });
-        } else {
-          setNumber({
-            tel: '016806465',
-            num: '(01) 6806465'
-          });
-        }
+        setNumber({
+          tel: '016806465',
+          num: '(01) 6806465'
+        });
       }
-
     } else {
       if (TSource) {
         switch (TSource) {
@@ -126,35 +125,35 @@ export const Footer = () => {
               num: '(01) 7028541'
             });
             break;
-
+  
           case '02clarointernet':
             setNumber({
               tel: '017028545',
               num: '(01) 7028545'
             });
             break;
-
+  
           case '03clarotv':
             setNumber({
               tel: '016806303',
               num: '(01) 6806303'
             });
             break;
-
+  
           case '05claroperu':
             setNumber({
               tel: '017017610',
               num: '(01) 7017610'
             });
             break;
-
+  
           case '06claromovil':
             setNumber({
               tel: '016805992',
               num: '(01) 6805992'
             });
             break;
-
+  
           case 'rrss':
             setNumber({
               tel: '015009717',
