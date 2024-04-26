@@ -51,7 +51,7 @@ const Form: FC<FormProps> = ({
       setResponse('')
     }, 3000);
   }
-  
+
   const callMeNumber = async (number: string) => {
     try {
       const res = await axios.post('https://develzpbx.com:4004/call-me',{
@@ -62,8 +62,13 @@ const Form: FC<FormProps> = ({
         }
       });
       console.log(res)
+
+      interval('¡Gracias por contactarnos! En breve, un asesor se pondrá en contacto contigo.');
+      setLoading(false);
     } catch (error) {
-      console.log(error)
+      console.error(error)
+      interval('Estimado cliente el número debe tener 9 dígitos o esta mal colocado.')
+      setLoading(false);
     };
   };
 
@@ -174,22 +179,22 @@ const Form: FC<FormProps> = ({
 
     const lead = url + data.toString();
 
-    fetch(lead)
-    .then((res) => res.json())
-    .catch((error) => console.log(error))
-    .then((response) => {
-      console.log(response);
-      console.log(lead);
-      if (response.status === 'ERROR') {
-        interval('Estimado cliente el número debe tener 9 dígitos o esta mal colocado.')
-        setLoading(false);
-      } else {
-        interval('¡Gracias por contactarnos! En breve, un asesor se pondrá en contacto contigo.');
-        setLoading(false);
-      }
-      setInputState(() => (''));
-      console.log(service);
-    });
+    // fetch(lead)
+    // .then((res) => res.json())
+    // .catch((error) => console.log(error))
+    // .then((response) => {
+    //   console.log(response);
+    //   console.log(lead);
+    //   if (response.status === 'ERROR') {
+    //     interval('Estimado cliente el número debe tener 9 dígitos o esta mal colocado.')
+    //     setLoading(false);
+    //   } else {
+    //     interval('¡Gracias por contactarnos! En breve, un asesor se pondrá en contacto contigo.');
+    //     setLoading(false);
+    //   }
+    //   setInputState(() => (''));
+    //   console.log(service);
+    // });
   }
   const handleRedirect = () => {
     if(TSource === 'rrss'){
