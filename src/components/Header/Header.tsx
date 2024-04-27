@@ -17,8 +17,8 @@ export const Header = () => {
     tel: string,
     num: string
   }>({
-    tel: '016805993',
-    num: '(01) 6805993'
+    tel: '017028787',
+    num: '(01) 7028787'
   });
   const [TSource] = useState(params.get('T-source'));
   const [messageButton, setMessageButton] = useState<string>('SI YA ERES CLIENTE CLARO HAZ CLICK AQUÍ');
@@ -36,8 +36,8 @@ export const Header = () => {
       //   switch(TSource){
       //     case 'ext':
       //       setNumber({
-      //         tel: '016806465',
-      //         num: '(01) 6806465'
+      //         tel: '017028787',
+      //         num: '(01) 7028787'
       //       });
       //       break;
 
@@ -66,13 +66,13 @@ export const Header = () => {
       // }
       if (pathname.includes('planes-moviles')){
         setNumber({
-          tel: '016806465',
-          num: '(01) 6806465'
+          tel: '017028787',
+          num: '(01) 7028787'
         });
       }else{
         setNumber({
-          tel: '016806465',
-          num: '(01) 6806465'
+          tel: '017028787',
+          num: '(01) 7028787'
         });
       }
     }else{
@@ -108,8 +108,8 @@ export const Header = () => {
   
           case '06claromovil':
             setNumber({
-              tel: '016805992',
-              num: '(01) 6805992'
+              tel: '017028787',
+              num: '(01) 7028787'
             });
             break;
   
@@ -123,13 +123,13 @@ export const Header = () => {
       } else {
         if (pathname.includes('planes-moviles')){
           setNumber({
-            tel: '016805992',
-            num: '(01) 6805992'
+            tel: '017028787',
+            num: '(01) 7028787'
           });
         }else{
           setNumber({
-            tel: '016805993',
-            num: '(01) 6805993'
+            tel: '017028787',
+            num: '(01) 7028787'
           });
         }
       }

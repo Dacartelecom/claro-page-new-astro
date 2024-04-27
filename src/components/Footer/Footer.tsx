@@ -66,8 +66,8 @@ export const Footer = () => {
     tel: string,
     num: string
   }>({
-    tel: '016805993',
-    num: '(01) 6805993'
+    tel: '017028787',
+    num: '(01) 7028787'
   });
   const [TSource] = useState(params.get('T-source'));
 
@@ -77,8 +77,8 @@ export const Footer = () => {
       //   switch (TSource) {
       //     case 'ext':
       //       setNumber({
-      //         tel: '016806465',
-      //         num: '(01) 6806465'
+      //         tel: '017028787',
+      //         num: '(01) 7028787'
       //       });
       //       break;
 
@@ -107,13 +107,13 @@ export const Footer = () => {
       // }
       if (pathname.includes('planes-moviles')) {
         setNumber({
-          tel: '016806465',
-          num: '(01) 6806465'
+          tel: '017028787',
+          num: '(01) 7028787'
         });
       } else {
         setNumber({
-          tel: '016806465',
-          num: '(01) 6806465'
+          tel: '017028787',
+          num: '(01) 7028787'
         });
       }
     } else {
@@ -149,8 +149,8 @@ export const Footer = () => {
   
           case '06claromovil':
             setNumber({
-              tel: '016805992',
-              num: '(01) 6805992'
+              tel: '017028787',
+              num: '(01) 7028787'
             });
             break;
   
@@ -164,13 +164,13 @@ export const Footer = () => {
       } else {
         if (pathname.includes('planes-moviles')) {
           setNumber({
-            tel: '016805992',
-            num: '(01) 6805992'
+            tel: '017028787',
+            num: '(01) 7028787'
           });
         } else {
           setNumber({
-            tel: '016805993',
-            num: '(01) 6805993'
+            tel: '017028787',
+            num: '(01) 7028787'
           });
         }
       }

@@ -827,7 +827,7 @@ const BodyCards = () => {
       if (tSource){
         switch(tSource){
           case 'ext':
-            setNumberCall(() => '(01) 6806465');
+            setNumberCall(() => '(01) 7028787');
             break;
 
           case 'ext_1':
@@ -839,11 +839,11 @@ const BodyCards = () => {
             break;
 
           default:
-            setNumberCall(() => '(01) 6806465');
+            setNumberCall(() => '(01) 7028787');
             break;
         }
       }else{
-        setNumberCall(() => '(01) 6806465');
+        setNumberCall(() => '(01) 7028787');
       }
       
     }else{
@@ -866,7 +866,7 @@ const BodyCards = () => {
             break;
   
           case '06claromovil':
-            setNumberCall(() => '(01) 6805992');
+            setNumberCall(() => '(01) 7028787');
             break;
 
           case 'rrss':
@@ -874,11 +874,11 @@ const BodyCards = () => {
             break;
 
           default:
-            setNumberCall(() => '(01) 6805993');
+            setNumberCall(() => '(01) 7028787');
             break;
         }
       }else{
-        setNumberCall(() => '(01) 6805993');
+        setNumberCall(() => '(01) 7028787');
       }
     }
   },[tSource]);
